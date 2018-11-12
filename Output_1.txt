@@ -1,0 +1,103 @@
+
+***********************************
+
+Generating Certain Rules
+
+***********************************
+
+Loop 1:
+***********************************
+
+Marked Values:
+[A2]=[x1, x5]
+[F1]=[x1, x4]
+[G3]=[x1, x6]
+
+Certain Rules:
+set key: [A2]
+decision to: C2
+[A2] -> C2
+set key: [F1]
+decision to: C2
+[F1] -> C2
+set key: [G3]
+decision to: C2
+[G3] -> C2
+
+Possible Rules:
+[G1] -> C2 [Support: 1, Confidence: 50%]
+[G2] -> C2 [Support: 1, Confidence: 50%]
+[F2] -> C2 [Support: 2, Confidence: 50%]
+[A1] -> C2 [Support: 2, Confidence: 50%]
+
+Loop 2:
+***********************************
+
+Marked Values:
+[A2]=[x1, x5]
+[G1, F2]=[x2]
+[F1]=[x1, x4]
+[G3]=[x1, x6]
+[A1, G2]=[x3]
+
+Certain Rules:
+
+Possible Rules:
+[G2, F2] -> C2 [Support: 1, Confidence: 50%]
+[A1, G1] -> C2 [Support: 1, Confidence: 50%]
+[A1, F2] -> C2 [Support: 1, Confidence: 33%]
+
+Loop 3:
+***********************************
+
+Marked Values:
+[A2]=[x1, x5]
+[G1, F2]=[x2]
+[F1]=[x1, x4]
+[G3]=[x1, x6]
+[A1, G2]=[x3]
+
+Certain Rules:
+None
+
+***********************************
+
+Generating Action Rules
+
+***********************************
+ 
+ 
+Action Rule Schema: 
+[(A, ->A2)] -> (C, C1->C2)
+ 
+Support for Action Schema: [x2, x3]
+ 
+Marked Sets: 
+None
+ 
+Action Rules: 
+None
+ 
+ 
+Action Rule Schema: 
+[(F, ->F1)] -> (C, C1->C2)
+ 
+Support for Action Schema: [x2, x3]
+ 
+Marked Sets: 
+None
+ 
+Action Rules: 
+None
+ 
+ 
+Action Rule Schema: 
+[G3] -> (C, C1->C2)
+ 
+Support for Action Schema: []
+ 
+Marked Sets: 
+None
+ 
+Action Rules: 
+None
